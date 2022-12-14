@@ -6,10 +6,68 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 </head>
 
 <body>
+  <!-- Swiper -->
+  <section class="swiper-wrap">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./image/bg_3.jpg" alt="./image/bg_3.jpg">
+        </div>
+        <div class="swiper-slide">
+          <img src="./image/bg_2.jpg" alt="./image/bg_2.jpg">
+        </div>
+        <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide">Slide 4</div>
+        <div class="swiper-slide">Slide 5</div>
+        <div class="swiper-slide">Slide 6</div>
+        <div class="swiper-slide">Slide 7</div>
+        <div class="swiper-slide">Slide 8</div>
+        <div class="swiper-slide">Slide 9</div>
+      </div>
+    </div>
+  </section>
+  <section class="home-page">
+    <div class="header grid grid-cols-2">
+      <div>
+        <a class="brand" href="index.html">Feliciano</a>
+      </div>
+    </div>
+  </section>
 
+
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {});
+  </script>
 </body>
 
 </html>
